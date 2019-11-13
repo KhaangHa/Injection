@@ -1,0 +1,22 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="commandType" xsi:type="object">Magenest\Injection\Command\Testbed</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="modifyForClass" type="Magenest\Injection\Model\Argument1">
+        <arguments>
+            <argument name="the_argument" xsi:type="object">Magenest\Injection\Model\Argument3</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magenest\Injection\Model\Example">
+        <arguments>
+            <argument name="the_object" xsi:type="object">modifyForClass</argument>
+        </arguments>
+    </type>
+
+    </config>
