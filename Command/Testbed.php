@@ -39,23 +39,16 @@ class Testbed extends Command
     protected function showNestedPropertiesForObject()
     {
         $object_manager = $this->getObjectManager();        
-        $example         = $object_manager->create('Magenest\Injection\Model\Example');
-        $this->output("Magenest\Injection\Model\Example object");
-        $properties     = get_object_vars($example);        
+        $example         = $object_manager->create('Magenest\Injection\Model\Flame');
+        $this->output(" SPARK ARGUMENTS CONSTRUCTED IN FLAME:");
+        $properties     = get_object_vars($example->example_object);
         foreach($properties as $name=>$property)
         {
             $this->reportOnVariable($name, $property);       
         }  
         
-        $this->output("Magenest\Injection\Model\Example object->property_of_example_object");
-        $properties     = get_object_vars($example->property_of_example_object);        
-        foreach($properties as $name=>$property)
-        {
-            $this->reportOnVariable($name, $property);       
-        }  
-        
-        $this->output("Magenest\Injection\Model\Argument1");
-        $argument1  = $object_manager->create('Magenest\Injection\Model\Argument1');
+        $this->output(" SPARK ARGUMENTS SELF CONSTRUCTED");
+        $argument1  = $object_manager->create('Magenest\Injection\Model\Spark');
         $properties = get_object_vars($argument1);        
         foreach($properties as $name=>$property)
         {

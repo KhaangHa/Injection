@@ -1,6 +1,6 @@
 <?php
 namespace Magenest\Injection\Model;
-class Argument2 
+class Tinder2 extends Tinder1
 {
 
 }

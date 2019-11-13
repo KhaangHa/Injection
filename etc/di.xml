@@ -7,13 +7,14 @@
         </arguments>
     </type>
 
-    <virtualType name="modifyForClass" type="Magenest\Injection\Model\Argument1">
+    <virtualType name="modifyForClass" type="Magenest\Injection\Model\Spark">
         <arguments>
-            <argument name="the_argument" xsi:type="object">Magenest\Injection\Model\Argument3</argument>
+            <argument name="the_argument" xsi:type="object">Magenest\Injection\Model\Tinder2</argument>
+            <argument name="target" xsi:type="string">modified</argument>
         </arguments>
     </virtualType>
 
-    <type name="Magenest\Injection\Model\Example">
+    <type name="Magenest\Injection\Model\Flame">
         <arguments>
             <argument name="the_object" xsi:type="object">modifyForClass</argument>
         </arguments>
